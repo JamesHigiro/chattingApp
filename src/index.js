@@ -6,6 +6,8 @@ const Filter = require('bad-words')
 const { generateMessage, generateLocationMessage } = require('./utils/messages')
 const { addUser, removeUser, getUser, getUsersInRoom } = require('./utils/users')
 
+const a ="james"
+
 const app = express()
 const server = http.createServer(app)
 const io = socketio(server)
@@ -71,3 +73,4 @@ io.on('connection', (socket) => {
 server.listen(port, () => {
     console.log(`Server is up on port ${port}!`)
 })
+
